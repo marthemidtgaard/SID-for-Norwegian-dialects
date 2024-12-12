@@ -1,1 +1,20 @@
-# SID-for-Norwegian-dialects
+# Slot and Intent Detection (SID) for Norwegian Dialects
+
+This repository contains novel Norwegian SID datasets used in our (LTG) submission to the VarDial 2025 Shared Task on Slot and Intent Detection (SID). The data includes re-annotated and re-aligned Norwegian versions of the `xSID-0.6` dataset, as well as a Norwegian portion of the MASSIVE dataset mapped to the xSID annotation scheme. Below is a description of the data files and their contents.
+
+---
+### 1. MASSIVE Norwegian Data
+- **Description**: The Norwegian subset of the MASSIVE dataset, consisting of SID-annotated utterances in standard Bokmål.
+- **File**: `nb_mas.json`
+
+### 2. Norwegian xSID Data
+This data comprises reprocessed versions of the Norwegian Bokmål `xSID-0.6` dataset.
+
+#### a) Bokmål Re-Annotated (`nb_ra`)
+- **Description**: A re-annotated version of the original Norwegian `xSID-0.6` dataset. 
+- **File**: `nb_ra.json`
+
+#### b) Bokmål Translated and Re-Aligned (`nb_rt`)
+- **Description**: A new version of `xSID-0.6` created by first translating English utterances into Bokmål using machine translation and then re-aligning slot spans.
+- **File**: `nb_rt.json`
+
