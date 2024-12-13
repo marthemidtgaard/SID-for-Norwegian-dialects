@@ -1,6 +1,6 @@
 # Slot and Intent Detection (SID) for Norwegian Dialects
 
-This repository contains novel Norwegian SID datasets used in our (LTG) submission to the VarDial 2025 Shared Task on Slot and Intent Detection (SID). The data includes re-annotated and re-aligned Norwegian versions of the [xSID-0.6 dataset](https://github.com/mainlp/xsid), as well as a Norwegian portion of the [MASSIVE dataset](https://github.com/alexa/massive/tree/main) mapped to the xSID annotation scheme. Below is a description of the data files and their contents.
+This repository contains novel Norwegian SID datasets used in our (LTG) submission to the VarDial 2025 Shared Task on Slot and Intent Detection (SID). The data includes re-aligned and re-translated Norwegian versions of the [xSID-0.6 dataset](https://github.com/mainlp/xsid), as well as a Norwegian portion of the [MASSIVE dataset](https://github.com/alexa/massive/tree/main) mapped to the xSID annotation scheme. Below is a description of the data files and their contents.
 
 ---
 ### 1. MASSIVE Norwegian Data
