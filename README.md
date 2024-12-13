@@ -4,18 +4,16 @@ This repository contains novel Norwegian SID datasets used in our (LTG) submissi
 
 ---
 ### 1. MASSIVE Norwegian Data
-- **Description**: The Norwegian subset of the MASSIVE dataset, consisting of SID-annotated utterances in standard Bokmål.
+- **Description**: The Norwegian subset of the MASSIVE dataset, consisting of manually SID-annotated utterances in standard Bokmål.
 - **File**: `nb_mas.json`
 
 ### 2. Norwegian xSID Data
-This data comprises reprocessed versions of the Norwegian Bokmål `xSID-0.6` training dataset.
-
-#### a) The original projected Bokmål  (`nb`)
+#### a) Original Bokmål (`nb`)
 - **Description**: The original Norwegian `xSID-0.6` training data. Derived through machine translation and slot alignment via attention mechanisms.
 - **File**: `nb.json`
   
-#### b) Bokmål Re-Annotated (`nb_ra`)
-- **Description**: A re-annotated version of the original Norwegian `xSID-0.6` training dataset. 
+#### b) Bokmål Re-Aligned (`nb_ra`)
+- **Description**: An automatically re-aligned version of the original Norwegian `xSID-0.6` training dataset. 
 - **File**: `nb_ra.json`
 
 #### c) Bokmål Translated and Re-Aligned (`nb_rt`)
