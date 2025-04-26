@@ -4,3 +4,9 @@
 [submodule "master_thesis/data/aux_data/norne"]
 	path = master_thesis/data/aux_data/norne
 	url = https://github.com/ltgoslo/norne.git
+[submodule "simalign"]
+	path = simalign
+	url = https://github.com/cisnlp/simalign.git
+[submodule "machamp"]
+	path = machamp
+	url = https://github.com/machamp-nlp/machamp.git
