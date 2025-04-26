@@ -9,8 +9,12 @@ Experiments are run by submitting the provided SLURM scripts for fine-tuning SID
 
 
 ### Base Fine-Tuning
-`train.slurm <pre-trained model> <fine-tuning data>`: Fine-tunes a pre-trained model on a SID dataset.
-`train_with_dev.slurm`: Same as `train.slurm`, but used when `nomusic` is part of the fine-tuning dataset (i.e., needs a separate development set).
+Fine-tune a pre-trained model on a SID dataset:
+```bash
+sbatch train.slurm <pre-trained model> <fine-tuning data>
+sbatch train_with_dev.slurm <pre-trained model> <fine-tuning data>
+```
+nr2: used when `nomusic` is part of the fine-tuning dataset (i.e., needs a separate development set).
 
 ---
 
