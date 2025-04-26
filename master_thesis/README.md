@@ -35,7 +35,7 @@ sbatch train_joint_two_aux_with_dev.slurm <pre-trained model> <fine-tuning data>
 sbatch train_int_two_aux_with_dev.slurm <pre-trained model> <fine-tuning data> <aux task 1> <aux task 2>
 
 ```
-Intermediate task training: Auxiliary tasks must be passed in the correct order.
+NB: With intermediate task learning, the auxiliary tasks must be passed in the correct order.
 
 ---
 
@@ -43,7 +43,7 @@ Intermediate task training: Auxiliary tasks must be passed in the correct order.
 Pre-trained models: MaChAmp requires a configuration file for the selected pre-trained model. Included model options:
 - mbert, mdberta, mt0, rembert, xlmr, nbbert, norbert
 
-**Special note for NorBERT:**
+#### Special note for NorBERT:
 NorBERT uses **non-standard Huggingface code**, requiring small changes:
 - **For fine-tuning**:  
     In `../machamp/machamp/model/machamp.py`, change:
@@ -67,10 +67,10 @@ NorBERT uses **non-standard Huggingface code**, requiring small changes:
     3. Move the cloned files into the created directory.  
 
 
-#### Available Fine-tuning Datasets
-Choose from files in the `data/` folder, except for files that include "dev" or "test" in their names.
+Available Fine-tuning Datasets: Choose from files in the `data/` folder, except for files that include "dev" or "test" in their names.
 
-### 💾 Model Outputs
+---
+### Model Outputs
 Models, training logs, development predictions and evaluation metrics are saved under `machamp/logs`. Each model is fine-tuned **three times** with different seeds for robustness.
 
 
@@ -85,6 +85,9 @@ When using joint auxiliary task learning setups, inside the prediction SLURM scr
 ```bash
 --dataset SID4LR
 ```
+
+---
+
 ### Outputs
 Predictions, overall and dialect-specific performance metrics for each run are saved individually under `machamp/logs/<model_setup>/predictions/`.
 Mean and standard deviation across the three runs are saved under `predictions` in this folder, both for overall metrics and dialect-specific.
