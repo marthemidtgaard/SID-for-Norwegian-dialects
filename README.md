@@ -1,27 +1,18 @@
 # Slot and Intent Detection (SID) for Norwegian Dialects
 
-This repository contains novel Norwegian SID datasets used in our (LTG) submission to the VarDial 2025 Shared Task on Slot and Intent Detection (SID). The data includes re-aligned and re-translated Norwegian versions of the [xSID-0.6 dataset](https://github.com/mainlp/xsid), as well as a Norwegian portion of the [MASSIVE dataset](https://github.com/alexa/massive/tree/main) mapped to the xSID annotation scheme. Below is a description of the data files and their contents.
+This repository contains code used for the thesis titled "Slot and Intent Detection for Norwegian Dialects" (to be released). The codebase is aslo used for our participation in the VarDial 2025 Shared Task on Norwegian Slot and Intent Detection, named [LTG at VarDial 2025 NorSID: More and Better Training Data for Slot and Intent Detection](https://aclanthology.org/2025.vardial-1.15/) (Midtgaard et al., 2025)). Some scripts, settings and datasets have been further improved and extended as part of the master's thesis work, compared to the original shared task submission.
 
----
-### 1. MASSIVE Norwegian Data
-- **Description**: The Norwegian subset of the MASSIVE dataset, consisting of manually SID-annotated utterances in standard Bokmål.
-- **File**: `nb_mas.json`
+## Structure
+- `master_thesis/`:
+- `machamp/`:
+- `simalign/`:
+- `vardial_data/`:
 
-### 2. Norwegian xSID Data
-#### a) Original Bokmål (`nb`)
-- **Description**: The original Norwegian `xSID-0.6` training data. Derived through machine translation and slot alignment via attention mechanisms.
-- **File**: `nb.json`
-  
-#### b) Bokmål Re-Aligned (`nb_ra`)
-- **Description**: An automatically re-aligned version of the original Norwegian `xSID-0.6` training dataset. 
-- **File**: `nb_ra.json`
 
-#### c) Bokmål Translated and Re-Aligned (`nb_rt`)
-- **Description**: A new version of `xSID-0.6` created by first translating English utterances into Bokmål using machine translation and then re-aligning slot spans.
-- **File**: `nb_rt.json`
+## Data
 
-#### d) Nynorsk Translated and Re-Aligned (`nn_rt`)
-- **Description**: A new version of `xSID-0.6` created by first translating English utterances into Nynorsk using machine translation and then re-aligning slot spans.
-- **File**: `nn_rt.json`
-
+## Citation
+If you use this code, please cite:
+- Midtgaard et al., 2025. [LTG at VarDial 2025 NorSID: More and Better Training Data for Slot and Intent Detection](https://aclanthology.org/2025.vardial-1.15/)
+- (Link to thesis once released)
 
