@@ -1,3 +1,5 @@
+# Data proposed in VarDial 2025 shared task 
+
 In this subfolder you will find our new and improved Norwegian SID datasets used in our (LTG) submission to the VarDial 2025 Shared Task on Slot and Intent Detection (SID). The data includes re-aligned and re-translated Norwegian versions of the [xSID-0.6 dataset](https://github.com/mainlp/xsid), as well as a Norwegian portion of the [MASSIVE dataset](https://github.com/alexa/massive/tree/main) mapped to the xSID annotation scheme. Below is a description of the data files and their contents.
 
 ---
