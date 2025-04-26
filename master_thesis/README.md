@@ -40,6 +40,7 @@ NB: With intermediate task learning, the auxiliary tasks must be passed in the c
 ---
 
 ### Arguments
+**Available Fine-tuning Datasets**: Choose from files in the `data/` folder, except for files that include "dev" or "test" in their names.
 Pre-trained models: MaChAmp requires a configuration file for the selected pre-trained model. Included model options:
 - mbert, mdberta, mt0, rembert, xlmr, nbbert, norbert
 
@@ -62,8 +63,6 @@ NorBERT uses non-standard Huggingface code, requiring small changes:
     2. Clone the Huggingface NorBERT repo: [https://huggingface.co/ltg/norbert3-base](https://huggingface.co/ltg/norbert3-base)
     3. Move the cloned files into the created directory.  
 
-
-Available Fine-tuning Datasets: Choose from files in the `data/` folder, except for files that include "dev" or "test" in their names.
 
 ---
 ### Model Outputs
