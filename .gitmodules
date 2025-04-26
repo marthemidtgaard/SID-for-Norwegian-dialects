@@ -1,0 +1,6 @@
+[submodule "master_thesis/data/aux_data/ndc-aligned"]
+	path = master_thesis/data/aux_data/ndc-aligned
+	url = https://github.com/Helsinki-NLP/ndc-aligned.git
+[submodule "master_thesis/data/aux_data/norne"]
+	path = master_thesis/data/aux_data/norne
+	url = https://github.com/ltgoslo/norne.git

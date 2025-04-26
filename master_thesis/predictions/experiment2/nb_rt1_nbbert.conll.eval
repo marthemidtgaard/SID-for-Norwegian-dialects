@@ -1,0 +1,22 @@
+{
+    "intent_accuracy": {
+        "mean": 0.987,
+        "std": 0.001
+    },
+    "slot_precision": {
+        "mean": 0.823,
+        "std": 0.01
+    },
+    "slot_recall": {
+        "mean": 0.78,
+        "std": 0.002
+    },
+    "slot_f1": {
+        "mean": 0.801,
+        "std": 0.004
+    },
+    "sum": {
+        "mean": 1.788,
+        "std": 0.004
+    }
+}
