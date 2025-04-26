@@ -14,18 +14,28 @@ Fine-tune a pre-trained model on a SID dataset:
 sbatch train.slurm <pre-trained model> <fine-tuning data>
 sbatch train_with_dev.slurm <pre-trained model> <fine-tuning data>
 ```
-nr2: used when `nomusic` is part of the fine-tuning dataset (i.e., needs a separate development set).
+`train_with_dev`: used when `nomusic` is part of the fine-tuning dataset (i.e., needs a separate development set).
 
 ---
 
 ### Auxiliary Task Fine-Tuning
-`train_joint_aux.slurm <pre-trained model> <fine-tuning data> <aux task>` and `train_int_aux.slurm <pre-trained model> <fine-tuning data> <aux task>`: Fine-tuning with **one auxiliary task**.
-  - Auxiliary tasks: (`ner`, `dep`, `mlm`, `pos`)
-`train_joint_aux_with_dev.slurm` and `train_int_aux_with_dev.slurm`: Same as above, but used when `nomusic` is part of the SID fine-tuning dataset.
+Fine-tuning with **one auxiliary task** (ner, dep, mlm, pos):
+```bash
+sbatch train_joint_aux.slurm <pre-trained model> <fine-tuning data> <aux task>
+sbatch train_int_aux.slurm <pre-trained model> <fine-tuning data> <aux task>
 
-`train_joint_two_aux_with_dev.slurm <pre-trained model> <fine-tuning data> <aux task 1> <aux task 2>` and `train_int_two_aux_with_dev.slurm <pre-trained model> <fine-tuning data> <aux task 1> <aux task 2>`: Fine-tuning with **two auxiliary tasks**.
-  - **Important for intermediate task (int) training**:
-    Auxiliary tasks must be passed **in the correct order** (as used in intermediate training).
+sbatch train_joint_aux_with_dev.slurm <pre-trained model> <fine-tuning data> <aux task>
+sbatch train_int_aux_with_dev.slurm <pre-trained model> <fine-tuning data> <aux task>
+```
+`train_joint_aux_with_dev` and `train_int_aux_with_dev`: Used when `nomusic` is part of the SID fine-tuning dataset.
+
+Fine-tuning with **two auxiliary tasks**:
+```bash
+sbatch train_joint_two_aux_with_dev.slurm <pre-trained model> <fine-tuning data> <aux task 1> <aux task 2>
+sbatch train_int_two_aux_with_dev.slurm <pre-trained model> <fine-tuning data> <aux task 1> <aux task 2>
+
+```
+**Important for intermediate task (int) training**: Auxiliary tasks must be passed **in the correct order** (as used in intermediate training).
 
 ---
 
