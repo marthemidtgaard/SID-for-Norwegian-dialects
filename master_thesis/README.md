@@ -44,7 +44,7 @@ Pre-trained models: MaChAmp requires a configuration file for the selected pre-t
 - mbert, mdberta, mt0, rembert, xlmr, nbbert, norbert
 
 #### Special note for NorBERT:
-NorBERT uses **non-standard Huggingface code**, requiring small changes:
+NorBERT uses non-standard Huggingface code, requiring small changes:
 - For fine-tuning:  
     In `../machamp/machamp/model/machamp.py`, change:
     ```python
@@ -59,10 +59,7 @@ NorBERT uses **non-standard Huggingface code**, requiring small changes:
        ```
        /fp/homes01/u01/ec-USERNAME/.local/lib/python3.10/site-packages/transformers_modules/ltg/norbert3-base/
        ```      
-    2. Clone the Huggingface NorBERT repo:
-       ```
-       https://huggingface.co/ltg/norbert3-base
-       ```
+    2. Clone the Huggingface NorBERT repo: [https://huggingface.co/ltg/norbert3-base](https://huggingface.co/ltg/norbert3-base)
     3. Move the cloned files into the created directory.  
 
 
