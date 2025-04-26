@@ -9,29 +9,17 @@ Experiments are run by submitting the provided SLURM scripts for fine-tuning SID
 
 
 ### Base Fine-Tuning
-- `train.slurm`: Fine-tunes a pre-trained model on a SID dataset.
-  - **Arguments**:  
-    1. Pre-trained model  
-    2. Fine-tuning dataset
-- `train_with_dev.slurm`: Same as `train.slurm`, but used when `nomusic` is part of the fine-tuning dataset (i.e., needs a separate development set).
+`train.slurm <pre-trained model> <fine-tuning data>`: Fine-tunes a pre-trained model on a SID dataset.
+`train_with_dev.slurm`: Same as `train.slurm`, but used when `nomusic` is part of the fine-tuning dataset (i.e., needs a separate development set).
 
 ---
 
 ### Auxiliary Task Fine-Tuning
-- `train_joint_aux.slurm` and `train_int_aux.slurm`: Fine-tuning with **one auxiliary task**.
-  - **Arguments**:  
-    1. Pre-trained model  
-    2. SID fine-tuning dataset  
-    3. Auxiliary task (`ner`, `dep`, `mlm`, `pos`)
+`train_joint_aux.slurm <pre-trained model> <fine-tuning data> <aux task>` and `train_int_aux.slurm <pre-trained model> <fine-tuning data> <aux task>`: Fine-tuning with **one auxiliary task**.
+  - Auxiliary tasks: (`ner`, `dep`, `mlm`, `pos`)
+`train_joint_aux_with_dev.slurm` and `train_int_aux_with_dev.slurm`: Same as above, but used when `nomusic` is part of the SID fine-tuning dataset.
 
-- `train_joint_aux_with_dev.slurm` and `train_int_aux_with_dev.slurm`: Same as above, but used when `nomusic` is part of the SID fine-tuning dataset.
-
-- `train_joint_two_aux_with_dev.slurm` and `train_int_two_aux_with_dev.slurm`: Fine-tuning with **two auxiliary tasks**.
-  - **Arguments**:  
-    1. Pre-trained model  
-    2. SID fine-tuning dataset  
-    3. Auxiliary task 1  
-    4. Auxiliary task 2
+`train_joint_two_aux_with_dev.slurm <pre-trained model> <fine-tuning data> <aux task 1> <aux task 2>` and `train_int_two_aux_with_dev.slurm <pre-trained model> <fine-tuning data> <aux task 1> <aux task 2>`: Fine-tuning with **two auxiliary tasks**.
   - **Important for intermediate task (int) training**:
     Auxiliary tasks must be passed **in the correct order** (as used in intermediate training).
 
@@ -59,17 +47,16 @@ NorBERT uses **non-standard Huggingface code**, requiring small changes:
        ```
        /fp/homes01/u01/ec-USERNAME/.local/lib/python3.10/site-packages/transformers_modules/ltg/norbert3-base/
        ```
+       (Replace `ec-USERNAME` with your own username.)
     2. Clone the Huggingface NorBERT repo:
        ```
        https://huggingface.co/ltg/norbert3-base
        ```
     3. Move the cloned files into the created directory.  
-       (Replace `ec-USERNAME` with your own username.)
 
 
 #### Available Fine-tuning Datasets
-- Choose from files in the `data/` folder.
-- **Exclude** any files that include "dev" or "test" in their names.
+Choose from files in the `data/` folder, except for files that include "dev" or "test" in their names.
 
 ### 💾 Model Outputs
 Models, training logs, development predictions and evaluation metrics are saved under `machamp/logs`. Each model is fine-tuned **three times** with different seeds for robustness.
