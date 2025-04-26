@@ -41,7 +41,8 @@ NB: With intermediate task learning, the auxiliary tasks must be passed in the c
 
 ### Arguments
 **Available Fine-tuning Datasets**: Choose from files in the `data/` folder, except for files that include "dev" or "test" in their names.
-Pre-trained models: MaChAmp requires a configuration file for the selected pre-trained model. Included model options:
+
+**Pre-trained models**: MaChAmp requires a configuration file for the selected pre-trained model. Included model options:
 - mbert, mdberta, mt0, rembert, xlmr, nbbert, norbert
 
 #### Special note for NorBERT:
