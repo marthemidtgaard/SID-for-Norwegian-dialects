@@ -45,7 +45,7 @@ Pre-trained models: MaChAmp requires a configuration file for the selected pre-t
 
 #### Special note for NorBERT:
 NorBERT uses **non-standard Huggingface code**, requiring small changes:
-- **For fine-tuning**:  
+- For fine-tuning:  
     In `../machamp/machamp/model/machamp.py`, change:
     ```python
     self.mlm = AutoModel.from_pretrained(mlm)
@@ -54,12 +54,11 @@ NorBERT uses **non-standard Huggingface code**, requiring small changes:
     ```python
     self.mlm = AutoModel.from_pretrained(mlm, trust_remote_code=True)
     ```
-- **For prediction on Fox Educloud**:  
-    1. Create the directory:
+- For prediction on Fox Educloud:  
+    1. Create the directory (replace `ec-USERNAME` with your own username):
        ```
        /fp/homes01/u01/ec-USERNAME/.local/lib/python3.10/site-packages/transformers_modules/ltg/norbert3-base/
-       ```
-       (Replace `ec-USERNAME` with your own username.)
+       ```      
     2. Clone the Huggingface NorBERT repo:
        ```
        https://huggingface.co/ltg/norbert3-base
