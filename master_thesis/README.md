@@ -14,7 +14,7 @@ Fine-tune a pre-trained model on a SID dataset:
 sbatch train.slurm <pre-trained model> <fine-tuning data>
 sbatch train_with_dev.slurm <pre-trained model> <fine-tuning data>
 ```
-`train_with_dev`: used when `nomusic` is part of the fine-tuning dataset (i.e., needs a separate development set).
+`train_with_dev`: Used when `nomusic` is part of the fine-tuning dataset (i.e., needs a separate development set).
 
 ---
 
@@ -35,14 +35,12 @@ sbatch train_joint_two_aux_with_dev.slurm <pre-trained model> <fine-tuning data>
 sbatch train_int_two_aux_with_dev.slurm <pre-trained model> <fine-tuning data> <aux task 1> <aux task 2>
 
 ```
-**Important for intermediate task (int) training**: Auxiliary tasks must be passed **in the correct order** (as used in intermediate training).
+Intermediate task training: Auxiliary tasks must be passed in the correct order.
 
 ---
 
 ### Arguments
-#### Pre-trained Models
-MaChAmp requires a configuration file for the selected pre-trained model.  
-Included model options:
+Pre-trained models: MaChAmp requires a configuration file for the selected pre-trained model. Included model options:
 - mbert, mdberta, mt0, rembert, xlmr, nbbert, norbert
 
 **Special note for NorBERT:**
