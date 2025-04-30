@@ -224,7 +224,7 @@ def get_new_norwegian_slots(en_sentence, no_sentence, english_slots):
 
     return slots
 
-def re_align_slots(conn_align_from, conll_align_to):
+def re_align_slots(conn_align_from, conll_align_to, new_conll_out):
     df = create_dataframe(conn_align_from, conll_align_to)
 
     new_slots = []
@@ -284,12 +284,12 @@ def re_align_slots(conn_align_from, conll_align_to):
 
 
     # Write the updated lines to the new CoNLL file
-    with open(conll_align_to, 'w') as file:
+    with open(new_conll_out, 'w') as file:
         for updated_line in updated_lines:
             file.write(updated_line)
 
 
-#re_align_slots('../data/en.conll', '../data/new_nb.conll')
+re_align_slots('../data/en.conll', '../data/nb.conll', '../data/nb_ra.conll')
 
 
 
@@ -352,7 +352,7 @@ def fix_issues_with_bio_scheme(input_file, output_file):
             file.write('\n')
 
 
-#fix_issues_with_bio_scheme("data/new1_nb.conll", "data/new1_nb.conll")
+fix_issues_with_bio_scheme("../data/nb_ra.conll", "../data/nb_ra.conll")
 
 
     
