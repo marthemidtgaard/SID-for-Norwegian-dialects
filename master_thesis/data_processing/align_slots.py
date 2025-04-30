@@ -289,7 +289,7 @@ def re_align_slots(conn_align_from, conll_align_to, new_conll_out):
             file.write(updated_line)
 
 
-re_align_slots('../data/en.conll', '../data/nb.conll', '../data/nb_ra.conll')
+re_align_slots('data/en.conll', 'data/nb.conll', 'data/nb_ra.conll')
 
 
 
@@ -352,7 +352,7 @@ def fix_issues_with_bio_scheme(input_file, output_file):
             file.write('\n')
 
 
-fix_issues_with_bio_scheme("../data/nb_ra.conll", "../data/nb_ra.conll")
+fix_issues_with_bio_scheme("data/nb_ra.conll", "data/nb_ra.conll")
 
 
     
