@@ -68,7 +68,7 @@ mv slurm-${SLURM_JOB_ID}.out "$NEW_OUTPUT_FILE"
 # Run the MaChamp training
 cd ../machamp
 for SEED in 1234 5678 8446; do
-    python3 train.py --dataset_configs $CONFIG_FILE_SID $AUX_TASK_CONFIG1 $AUX_TASK_CONFIG2 \
+    python3 train.py --dataset_configs $CONFIG_FILE_SID $AUX_TASK_CONFIG \
     --parameters_config $CONFIG_FILE_MODEL \
     --seed "$SEED" \
     --name "${TRAIN_SET}_${MODEL_NAME}_joint_${AUX_TASK}" 
