@@ -1,0 +1,17 @@
+class:                    B       N       T       V       all
+
+slot recall:              0.7849  0.7978  0.8154  0.8178  0.8106
+slot precision:           0.8852  0.8404  0.8781  0.8729  0.8696
+slot f1:                  0.8320  0.8185  0.8456  0.8445  0.8391
+
+intent accuracy:          0.9940  0.9830  0.9880  0.9860  0.9867
+fully correct:            0.6520  0.6230  0.6687  0.6556  0.6529
+
+unlabeled slot recall:    0.8405  0.8518  0.8688  0.8680  0.8628
+unlabeled slot precision: 0.9479  0.8973  0.9356  0.9265  0.9256
+unlabeled slot f1:        0.8910  0.8739  0.9010  0.8963  0.8931
+
+loose slot recall:        0.8426  0.8628  0.8657  0.8671  0.8637
+loose slot precision:     0.9609  0.9263  0.9489  0.9430  0.9432
+loose slot f1:            0.8979  0.8934  0.9054  0.9035  0.9017
+
