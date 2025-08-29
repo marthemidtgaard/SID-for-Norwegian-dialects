@@ -14,5 +14,5 @@ Clone with the requrse-submodules flag to download all submodule contents: `git 
 ## ✍️ Citation
 If you use this code, please cite:
 - Midtgaard et al., 2025. [LTG at VarDial 2025 NorSID: More and Better Training Data for Slot and Intent Detection](https://aclanthology.org/2025.vardial-1.15/)
-- (Link to thesis once released)
+- Midtgaard, 2025. [Master Thesis](https://www.duo.uio.no/handle/10852/120951)
 
